@@ -1,4 +1,6 @@
+import { ApplicationState } from './../store/application-state';
 import { Component, OnInit } from '@angular/core';
+import { Store } from '@ngrx/store';
 
 @Component({
   // tslint:disable-next-line:component-selector
@@ -8,7 +10,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MessageSectionComponent implements OnInit {
 
-  constructor() { }
+  constructor(private store: Store<ApplicationState>) {
+    store.subscribe(
+      state => console.log('Message section component', state)
+    );
+   }
 
   ngOnInit() {
   }
