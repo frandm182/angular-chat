@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpModule } from '@angular/http';
 
 
 import { AppComponent } from './app.component';
@@ -8,6 +9,8 @@ import { ThreadSectionComponent } from './thread-section/thread-section.componen
 import { MessageSectionComponent } from './message-section/message-section.component';
 import { ThreadLisComponent } from './thread-lis/thread-lis.component';
 import { MessageLisComponent } from './message-lis/message-lis.component';
+
+import { ThreadsService } from './services/threads.service';
 
 
 @NgModule({
@@ -20,9 +23,10 @@ import { MessageLisComponent } from './message-lis/message-lis.component';
     MessageLisComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpModule
   ],
-  providers: [],
+  providers: [ThreadsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
