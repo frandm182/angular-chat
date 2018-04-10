@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { UserSelectionComponent } from './user-selection/user-selection.component';
 import { ThreadSectionComponent } from './thread-section/thread-section.component';
 import { MessageSectionComponent } from './message-section/message-section.component';
+import { ThreadLisComponent } from './thread-lis/thread-lis.component';
+import { MessageLisComponent } from './message-lis/message-lis.component';
 
 
 @NgModule({
@@ -13,7 +15,9 @@ import { MessageSectionComponent } from './message-section/message-section.compo
     AppComponent,
     UserSelectionComponent,
     ThreadSectionComponent,
-    MessageSectionComponent
+    MessageSectionComponent,
+    ThreadLisComponent,
+    MessageLisComponent
   ],
   imports: [
     BrowserModule
