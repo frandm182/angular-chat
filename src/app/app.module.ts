@@ -28,7 +28,7 @@ import { reducer } from './store/reducer';
   imports: [
     BrowserModule,
     HttpModule,
-    StoreModule.forRoot(reducer)
+    StoreModule.forRoot({reducer})
   ],
   providers: [ThreadsService],
   bootstrap: [AppComponent]
