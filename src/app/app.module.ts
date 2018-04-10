@@ -12,9 +12,9 @@ import { ThreadLisComponent } from './thread-lis/thread-lis.component';
 import { MessageLisComponent } from './message-lis/message-lis.component';
 
 import { ThreadsService } from './services/threads.service';
-function storeReducer(state: ApplicationState, action: Action): ApplicationState {
-  return state;
-}
+
+import { reducer } from './store/reducer';
+
 
 @NgModule({
   declarations: [
@@ -28,7 +28,7 @@ function storeReducer(state: ApplicationState, action: Action): ApplicationState
   imports: [
     BrowserModule,
     HttpModule,
-    StoreModule.forRoot( storeReducer, { initialState: INITIAL_APPLICATION_STATE})
+    StoreModule.forRoot(reducer)
   ],
   providers: [ThreadsService],
   bootstrap: [AppComponent]
